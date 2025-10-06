@@ -15,12 +15,18 @@ Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;
 
 NET 9
 
-Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force -nopluralize
+Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True" 
+Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force -nopluralize
+
+DB Local:
+
+Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True" 
+Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force -nopluralize
 
 In appsettings.json: 
 
   "ConnectionStrings": {
-    "DevConnection": "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True"
+    "DevConnection": "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True;Integrated Security=True;"
   }
 ------------------------------------------------------------------------------------------------------  
  Database First --MAC (NET 9)
