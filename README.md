@@ -20,7 +20,7 @@ Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force -nopluralize
 
 DB Local:
 
-Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True" 
+Scaffold-DBContext "Server=<your-server-database>;Database=<your-name-database>;User=<your-user-database>;Pwd=<your-password-database>;TrustServerCertificate=True;Integrated Security=True" 
 Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force -nopluralize
 
 In appsettings.json: 
